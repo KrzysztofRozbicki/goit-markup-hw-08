@@ -1,0 +1,37 @@
+@use '../utils/variables' as *;
+
+.section {
+  padding: $section-padding 0px;
+  text-align: center;
+
+  &__main-header {
+    margin-bottom: 1.875rem;
+    color: font-color('contrast');
+    font-size: font-size('main-header');
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    color: font-color('secondary');
+    font-size: font-size('section-header');
+    font-weight: 700;
+    margin-bottom: 3.125rem;
+  }
+
+  &--article {
+    background-color: font-color('contrast');
+  }
+
+  &--team {
+    background-color: $button-color;
+  }
+
+  &--cta {
+    background: linear-gradient($background-dark-transparent, $background-dark-transparent),
+      url('../images/main.jpg');
+    background-size: cover;
+  }
+}

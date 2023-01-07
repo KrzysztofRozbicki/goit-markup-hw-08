@@ -1,0 +1,28 @@
+@use '../utils/variables' as *;
+@use '../components/extends' as *;
+
+//klasa dla stylizowania icon social-media
+.social-media {
+  display: block;
+  padding: 0.75rem;
+  border-radius: 50%;
+  @extend .default-transition;
+
+  &--footer {
+    color: font-color('contrast');
+    background-color: $icon-background;
+    &:hover,
+    &:focus {
+      background-color: $active;
+    }
+  }
+
+  &--team {
+    color: $icon-color;
+    &:hover,
+    &:focus {
+      background-color: $active;
+      color: font-color('contrast');
+    }
+  }
+}

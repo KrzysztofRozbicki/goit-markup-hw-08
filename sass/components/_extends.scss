@@ -1,0 +1,20 @@
+@use '../utils/variables' as *;
+
+.modal-transition {
+  transition-property: opacity, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.default-transition {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.box-shadow {
+  box-shadow: 0px 1px 3px shadow('box-1'), 0px 1px 1px shadow('box-2'), 0px 2px 1px shadow('box-3');
+}
+
+.portfolio-shadow {
+  box-shadow: 0px 1px 1px shadow('portfolio-1'), 0px 4px 4px shadow('portfolio-2'),
+    1px 0.25rem 0.375rem shadow('portfolio-3');
+}

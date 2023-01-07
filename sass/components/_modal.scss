@@ -1,0 +1,57 @@
+@use '../utils/variables' as *;
+@use '../components/extends' as *;
+
+/* OKNO MODUŁOWE */
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vw;
+  background-color: $background-overlay;
+  @extend .modal-transition;
+}
+
+.is-hidden .modal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
+.modal {
+  position: fixed;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  @extend .modal-transition;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  background-color: font-color('contrast');
+  border-radius: 0.25rem;
+  @extend .box-shadow;
+
+  &__close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 1.875rem;
+    height: 1.875rem;
+    padding: 9px;
+    border: 1px solid $close-circle;
+    background-color: font-color('contrast');
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__close-icon {
+    display: block;
+  }
+}

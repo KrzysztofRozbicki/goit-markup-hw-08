@@ -1,0 +1,129 @@
+@use '../utils/variables' as *;
+@use '../components/extends' as *;
+
+.cta-form {
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__text {
+    text-align: center;
+    font-size: font-size('large');
+    font-weight: 700;
+
+    color: font-color('secondary');
+    margin-bottom: 0.75rem;
+  }
+
+  &__label {
+    position: relative;
+    font-size: font-size('small');
+
+    letter-spacing: 0.01em;
+    margin-bottom: 0.25rem;
+  }
+
+  &__input {
+    background-color: transparent;
+    border: 1px solid $input-border;
+    border-radius: 0.25rem;
+    padding: 0.75rem 0.75rem 0.75rem 2.625rem;
+    margin-bottom: 0.625rem;
+    @extend .default-transition;
+
+    &:focus-within {
+      outline: none;
+      border-color: $active;
+    }
+  }
+
+  &__icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+
+  &__label-box {
+    display: flex;
+    flex-direction: column;
+    fill: font-color('secondary');
+    @extend .default-transition;
+
+    &:focus-within {
+      fill: $active;
+    }
+  }
+
+  &__adnotations {
+    position: scroll;
+    padding: 0.75rem 1rem;
+    border: 1px solid $input-border;
+    border-radius: 0.25rem;
+    height: 7.5rem;
+    margin-bottom: 1.25rem;
+    font-size: font-size('small');
+
+    letter-spacing: 0.01em;
+    resize: none;
+    @extend .default-transition;
+    &::placeholder {
+      color: font-color('primary-transparent');
+    }
+    &:focus-within {
+      outline: none;
+      border-color: $active;
+    }
+  }
+
+  &__agreement {
+    position: relative;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 1.875rem;
+    margin-left: 0.25rem;
+    padding-left: 0.5rem;
+  }
+
+  &__checkbox {
+    opacity: 0;
+  }
+
+  &__agreement-link {
+    text-decoration-line: underline;
+    color: $active;
+  }
+
+  &__check-border {
+    position: absolute;
+    top: 0.25rem;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid font-color('secondary');
+    border-radius: 2px;
+    margin-right: 0.5rem;
+    @extend .default-transition;
+  }
+
+  &__checkbox:checked + &__check-border {
+    background-color: $active;
+    outline: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__checkbox:checked + &__check-border > &__check-icon {
+    visibility: visible;
+  }
+
+  &__check-icon {
+    visibility: hidden;
+    display: block;
+    fill: font-color('contrast');
+  }
+}

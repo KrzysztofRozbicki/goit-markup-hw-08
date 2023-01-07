@@ -1,0 +1,16 @@
+/* Klasy dla logo - ogólna + szczególna */
+@use '../utils/variables' as *;
+.logo {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: font-size('logo');
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: $active;
+  &__header {
+    color: $logo;
+  }
+  &__footer {
+    color: font-color('contrast');
+  }
+}
