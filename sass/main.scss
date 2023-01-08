@@ -65,16 +65,12 @@
 
 /* Klasa dla list */
 
-.list-item {
-  list-style: none;
+.margin {
+  margin: 9px 0px;
+}
 
-  &--margin {
-    margin: 9px 0px;
-  }
-
-  &--button {
-    display: inline-block;
-  }
+.block {
+  display: inline-block;
 }
 
 /* Klasa project dla siatki w których są przykłady portfolio */

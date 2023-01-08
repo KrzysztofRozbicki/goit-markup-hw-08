@@ -31,6 +31,9 @@ figure {
   border: 0px;
 }
 
+li {
+  list-style: none;
+}
 a {
   text-decoration: none;
   font-style: normal;
@@ -56,6 +59,8 @@ Sections
 img {
   vertical-align: middle;
   display: block;
+  height: auto;
+  max-width: 100%;
 }
 /**
 1. Remove the margin in all browsers.
