@@ -19,46 +19,49 @@
     <meta name="description" content="WebStudio - strona główna" />
   </head>
   <body class="webstudio">
-    <header class="menu">
+    <header class="header">
       <div class="container flex">
-        <!-- Logo -->
-        <div class="flex menu__left">
+          <!-- Logo -->
           <a href="index.html" class="logo">Web<span class="logo__header">Studio</span> </a>
-          <!-- Menu górne-->
+          <svg width="24" height="16" class="menu-button">
+            <use href="images/icons.svg#menu-button"></use>
+          </svg>
+        <!-- Menu górne-->
+        <div class="menu">
           <nav>
-            <ul class="flex menu__links">
+            <ul class="header__links">
               <li>
-                <a href="#" class="menu__hyperlink menu__hyperlink--is-active">Agencja</a>
+                <a href="#" class="header__hyperlink header__hyperlink--is-active">Agencja</a>
               </li>
               <li>
-                <a href="portfolio.html" class="menu__hyperlink">Portfolio</a>
+                <a href="portfolio.html" class="header__hyperlink">Portfolio</a>
               </li>
               <li>
-                <a href="#" class="menu__hyperlink">Kontakt</a>
+                <a href="#" class="header__hyperlink">Kontakt</a>
               </li>
             </ul>
           </nav>
-        </div>
-        <!-- dane teleadresowe-->
+          <!-- dane teleadresowe-->
 
-        <ul class="flex menu__right">
-          <li>
-            <a href="mailto:info@devstudio.com" class="contact contact--header">
-              <svg width="16" height="12" class="icon icon--top">
-                <use href="images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li>
-            <a href="tel:+48111111111" class="contact contact--header">
-              <svg width="10" height="16" class="icon icon--top">
-                <use href="images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +48 111 111 111
-            </a>
-          </li>
-        </ul>
+          <ul class="header__contacts">
+            <li>
+              <a href="mailto:info@devstudio.com" class="contact contact--header">
+                <svg width="16" height="12" class="icon icon--top">
+                  <use href="images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+48111111111" class="contact contact--header">
+                <svg width="10" height="16" class="icon icon--top">
+                  <use href="images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +48 111 111 111
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 

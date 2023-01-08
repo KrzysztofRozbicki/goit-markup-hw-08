@@ -2,8 +2,8 @@
 @use '../utils/variables' as *;
 @use '../components/extends' as *;
 
-.menu {
-  padding: 1.5rem 0px 25px 0px;
+.header {
+  padding: 1.5rem 0px;
   background-color: font-color('contrast');
   border-bottom: 1px solid $stroke-color;
 
@@ -32,15 +32,48 @@
     }
   }
 
-  &__left {
-    gap: 93px;
-  }
-
-  &__right {
-    gap: 3.125rem;
+  &__contacts {
+    @extend .flex;
+    margin-left: 1rem;
+    align-items: flex-end;
+    gap: 3rem;
   }
 
   &__links {
-    gap: 46px;
+    @extend .flex;
+    flex-grow: 1;
+    margin-left: 1rem;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .header__contacts {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+}
+
+.menu {
+  @extend .flex;
+  flex-grow: 0.75;
+}
+
+@media (max-width: 480px) {
+  .menu {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.menu-button {
+  align-items: flex-end;
+  fill: $logo;
+}
+
+@media (min-width: 480px) {
+  .menu-button {
+    display: none;
   }
 }
