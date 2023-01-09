@@ -1,0 +1,19 @@
+@use '../utils/variables' as *;
+@use '../components/extends' as *;
+
+// Klasa dla stylizywania kontaktów
+.contact {
+  @extend .default-transition;
+  &:hover,
+  &:focus {
+    color: $active;
+  }
+  &--header {
+    text-align: left;
+    color: font-color('primary');
+  }
+
+  &--footer {
+    color: font-color('address');
+  }
+}

@@ -95,7 +95,7 @@
   opacity: 1;
 }
 
-@media (min-width: calc($tablet-size + 1px)) {
+@media (min-width: $tablet-size) {
   .menu__toggle {
     display: none;
   }

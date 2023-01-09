@@ -2,12 +2,6 @@
 
 //klasy dla artykułów
 
-.flex--article {
-  flex-direction: column;
-  margin-bottom: $section-padding;
-  gap: 1.875rem;
-}
-
 .article {
   &__icon-box {
     padding: 25px 100px;
@@ -38,19 +32,7 @@
 }
 
 @media (min-width: $tablet-size) {
-  .flex--article {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
   .article {
     max-width: calc((100vw - 4rem) / 2);
-  }
-}
-
-@media (min-width: $desktop-size) {
-  .flex--article {
-    flex-wrap: nowrap;
   }
 }

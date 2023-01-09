@@ -1,0 +1,74 @@
+@use '../utils/variables' as *;
+@use '../components/extends' as *;
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &--customers {
+    flex-wrap: wrap;
+    gap: 1.875rem;
+    & * {
+      margin-inline: auto;
+    }
+  }
+
+  &--article {
+    flex-direction: column;
+    gap: 1.875rem;
+  }
+
+  &--footer {
+    flex-direction: column;
+  }
+
+  &--newsletter {
+    flex-direction: column;
+  }
+
+  &--social-media {
+    justify-content: center;
+    gap: 0.625rem;
+    * {
+      flex-basis: 2.75rem;
+    }
+  }
+
+  &--team {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .flex--article,
+  .flex--team {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .flex--footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .flex--customers,
+  .flex--article,
+  .flex--team,
+  .flex--footer,
+  .flex--newsletter {
+    flex-wrap: nowrap;
+  }
+  .flex--footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex--article {
+    margin-bottom: $section-padding;
+  }
+}

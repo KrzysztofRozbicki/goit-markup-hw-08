@@ -1,9 +1,5 @@
 @use '../utils/variables' as *;
 
-.flex--footer {
-  flex-direction: column;
-}
-
 .bottom {
   padding: 60px 0px;
 
@@ -30,5 +26,15 @@
   &__info {
     text-align: center;
     margin-bottom: 60px;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .bottom__info {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .bottom__header {
+    align-self: flex-start;
   }
 }

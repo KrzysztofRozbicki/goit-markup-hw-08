@@ -1,0 +1,16 @@
+@use '../utils/variables' as *;
+@use '../components/extends' as *;
+
+.client-logo {
+  border-radius: 0.25rem;
+  outline: 1px solid $icon-color;
+  padding: 1rem 2rem;
+  display: inline-block;
+  color: $icon-color;
+  @extend .default-transition;
+  &:hover,
+  &:focus {
+    color: $active;
+    outline-color: $active;
+  }
+}

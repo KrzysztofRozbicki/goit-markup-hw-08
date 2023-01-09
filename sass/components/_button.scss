@@ -36,12 +36,21 @@
 
   &--newsletter {
     margin-left: 0.75rem;
-    padding: 0.625rem 1.75rem 0.625rem 2.625rem;
+    padding: 0.625rem 1.75rem 0.625rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &--form {
     margin: 0 auto;
     width: 200px;
     box-shadow: 0px 0.25rem 0.25rem shadow('button');
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .button--newsletter {
+    width: 12.5rem;
   }
 }

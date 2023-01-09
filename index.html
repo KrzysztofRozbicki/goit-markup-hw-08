@@ -184,7 +184,12 @@
                 <img
                   src="images/team/team_1.jpg"
                   alt="Uśmiechnięty męzczyzna z brodą w okularach"
-                  srcset="images/team/team_1.jpg 270w, images/team/team_1@2x.jpg 450w"
+                  srcset="
+                    images/team/team_1.jpg     270w,
+                    images/team/team_1@2x.jpg  450w,
+                    images/team/team_1-768.jpg 354w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px;"
                 />
                 <figcaption class="team-member__description">
                   <span class="team-member__name">John Doe</span>
@@ -227,7 +232,12 @@
                 <img
                   src="images/team/team_2.jpg"
                   alt="Uśmiechnięta kobieta w okularach z długimi blond włosami"
-                  srcset="images/team/team_2@2x.jpg 2x"
+                  srcset="
+                    images/team/team_2.jpg     270w,
+                    images/team/team_2@2x.jpg  450w,
+                    images/team/team_2-768.jpg 354w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px;"
                 />
                 <figcaption class="team-member__description">
                   <span class="team-member__name">John Doe</span>
@@ -270,7 +280,12 @@
                 <img
                   src="images/team/team_3.jpg"
                   alt="Uśmiechnięty mężczyzna w błękitnej koszuli"
-                  srcset="images/team/team_3@2x.jpg 2x"
+                  srcset="
+                    images/team/team_3.jpg     270w,
+                    images/team/team_3@2x.jpg  450w,
+                    images/team/team_3-768.jpg 354w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px;"
                 />
                 <figcaption class="team-member__description">
                   <span class="team-member__name">John Doe</span>
@@ -313,7 +328,12 @@
                 <img
                   src="images/team/team_4.jpg"
                   alt="Meżczyzna w okularach w czarnej koszulce"
-                  srcset="images/team/team_4@2x.jpg 2x"
+                  srcset="
+                    images/team/team_4.jpg     270w,
+                    images/team/team_4@2x.jpg  450w,
+                    images/team/team_4-768.jpg 354w
+                  "
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 450px;"
                 />
                 <figcaption class="team-member__description">
                   <span class="team-member__name">John Doe</span>
@@ -357,7 +377,7 @@
       <section class="section section--article">
         <div class="container">
           <h2 class="section__header">Nasi klienci</h2>
-          <ul class="flex">
+          <ul class="flex flex--customers">
             <li>
               <a class="client-logo" href="#">
                 <svg width="106" height="60" class="icon">
@@ -406,57 +426,58 @@
     </main>
     <!-- footer z adresem i danymi kontaktowymi-->
     <footer class="bottom">
-      <div class="container flex">
-        <div>
-          <a href="index.html" class="logo">Web<span class="logo__footer">Studio</span></a>
-          <address>
-            <ul class="bottom__address">
-              <li class="list-item contact">m. Warszawa, Aleje Jerozolimskie 21</li>
-              <li class=".margin">
-                <a href="mailto:info@devstudio.com" class="contact contact--footer">
-                  info@example.com
+      <div class="container flex flex--footer">
+
+          <div class="bottom__info">
+            <a href="index.html" class="logo">Web<span class="logo__footer">Studio</span></a>
+            <address>
+              <ul class="bottom__address">
+                <li class="contact">m. Warszawa, Aleje Jerozolimskie 21</li>
+                <li class="bottom__address__margin">
+                  <a href="mailto:info@devstudio.com" class="contact contact--footer">
+                    info@example.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+48111111111" class="contact contact--footer">+48 111 111 111</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="bottom__info">
+            <p class="bottom__header">dołącz do nas</p>
+            <ul class="bottom__social-box">
+              <li>
+                <a href="#" class="social-media social-media--footer">
+                  <svg width="20" height="20" class="icon icon--social">
+                    <use href="images/icons.svg#icon-instagram-2"></use>
+                  </svg>
                 </a>
               </li>
               <li>
-                <a href="tel:+48111111111" class="contact contact--footer">+48 111 111 111</a>
+                <a href="#" class="social-media social-media--footer">
+                  <svg width="20" height="20" class="icon icon--social">
+                    <use href="images/icons.svg#icon-twitter-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-media social-media--footer">
+                  <svg width="20" height="20" class="icon icon--social">
+                    <use href="images/icons.svg#icon-facebook-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="social-media social-media--footer">
+                  <svg width="20" height="20" class="icon icon--social">
+                    <use href="images/icons.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
         </div>
-        <div>
-          <p class="bottom__header">dołącz do nas</p>
-          <ul class="bottom__social-box">
-            <li>
-              <a href="#" class="social-media social-media--footer">
-                <svg width="20" height="20" class="icon icon--social">
-                  <use href="images/icons.svg#icon-instagram-2"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="social-media social-media--footer">
-                <svg width="20" height="20" class="icon icon--social">
-                  <use href="images/icons.svg#icon-twitter-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="social-media social-media--footer">
-                <svg width="20" height="20" class="icon icon--social">
-                  <use href="images/icons.svg#icon-facebook-1"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="social-media social-media--footer">
-                <svg width="20" height="20" class="icon icon--social">
-                  <use href="images/icons.svg#icon-linkedin-1"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
+        <div class="flex flex--newsletter">
           <p class="bottom__header">zapisz się do newslettera</p>
           <form class="newsletter">
             <label for="newsletter"></label>
@@ -467,7 +488,7 @@
               placeholder="E-mail"
               class="newsletter__email-box"
             />
-            <button type="submit" class="flex button button--cta button--newsletter">
+            <button type="submit" class="button button--cta button--newsletter">
               Zapisz się
               <svg width="24" height="24" class="icon icon--newsletter">
                 <use href="images/icons.svg#icon-send"></use>

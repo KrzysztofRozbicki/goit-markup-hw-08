@@ -3,12 +3,6 @@
 
 /* klasy dla boxów z członkami zespołu */
 
-.flex--team {
-  flex-direction: column;
-  & * {
-    width: 100%;
-  }
-}
 .team-member {
   background-color: font-color('contrast');
   font-size: font-size('medium');
@@ -28,6 +22,6 @@
   &__position {
     font-weight: 400;
     margin-top: 0.625rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }

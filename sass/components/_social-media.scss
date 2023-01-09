@@ -3,16 +3,9 @@
 
 //klasa dla stylizowania icon social-media
 
-.flex--social-media {
-  justify-content: center;
-  gap: 10px;
-  & * {
-    width: 44px;
-  }
-}
-
 .social-media {
   display: block;
+  width: 44px;
   padding: 0.75rem;
   border-radius: 50%;
   @extend .default-transition;
@@ -27,7 +20,6 @@
 
   &--team {
     color: $icon-color;
-    padding-left: 0;
     &:hover,
     &:focus {
       background-color: $active;
