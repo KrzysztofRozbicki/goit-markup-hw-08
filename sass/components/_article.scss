@@ -1,6 +1,13 @@
 @use '../utils/variables' as *;
 
 //klasy dla artykułów
+
+.flex--article {
+  flex-direction: column;
+  margin-bottom: $section-padding;
+  gap: 1.875rem;
+}
+
 .article {
   &__icon-box {
     padding: 25px 100px;
@@ -13,7 +20,7 @@
     color: font-color('secondary');
     text-transform: uppercase;
     font-weight: 700;
-    text-align: left;
+    text-align: center;
     margin-bottom: 0.625rem;
   }
 
@@ -21,5 +28,29 @@
     font-weight: 400;
     text-align: justify;
     line-height: 1.7;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .article__header {
+    text-align: left;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .flex--article {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .article {
+    max-width: calc((100vw - 4rem) / 2);
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .flex--article {
+    flex-wrap: nowrap;
   }
 }

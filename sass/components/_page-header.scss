@@ -3,7 +3,7 @@
 @use '../components/extends' as *;
 
 .header {
-  padding: 1.5rem 0px;
+  padding: 1rem 0px;
   background-color: font-color('contrast');
   border-bottom: 1px solid $stroke-color;
 
@@ -54,12 +54,17 @@
   }
 }
 
+@media (min-width: $tablet-size) {
+  .header {
+    padding: 1.5rem 0px;
+  }
+}
 .nav {
   @extend .flex;
   flex-grow: 0.75;
 }
 
-@media (max-width: $mobile-size) {
+@media (max-width: $tablet-size) {
   .nav {
     display: none;
     visibility: hidden;

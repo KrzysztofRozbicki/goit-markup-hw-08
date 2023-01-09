@@ -23,8 +23,4 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  &--article {
-    margin-bottom: $section-padding;
-    gap: 1.875rem;
-  }
 }

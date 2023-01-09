@@ -11,16 +11,20 @@
   padding: 2rem;
   background-color: white;
   transform: translateX(100%);
-  @extend .default-transition;
   &__button {
     align-items: flex-end;
-    fill: $logo;
+    fill: currentColor;
+    @extend .default-transition;
   }
 
   &__toggle {
     background: none;
     border: none;
     cursor: pointer;
+    color: $logo;
+    :hover {
+      color: $active;
+    }
   }
 
   & &__toggle {
@@ -91,7 +95,7 @@
   opacity: 1;
 }
 
-@media (min-width: 480px) {
+@media (min-width: calc($tablet-size + 1px)) {
   .menu__toggle {
     display: none;
   }

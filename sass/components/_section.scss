@@ -1,14 +1,12 @@
 @use '../utils/variables' as *;
 
 .section {
-  padding: $section-padding 0px;
   text-align: center;
-
   &__main-header {
     margin-bottom: 1.875rem;
     color: font-color('contrast');
-    font-size: font-size('main-header');
-    line-height: 1.36;
+    font-size: font-size('extra-large');
+    line-height: 1.61;
     letter-spacing: 0.06em;
     font-weight: 900;
     text-transform: uppercase;
@@ -22,6 +20,7 @@
   }
 
   &--article {
+    padding: 3.75rem 0;
     background-color: font-color('contrast');
   }
 
@@ -30,8 +29,64 @@
   }
 
   &--cta {
-    background: linear-gradient($background-dark-transparent, $background-dark-transparent),
+    background-image: linear-gradient($background-dark-transparent, $background-dark-transparent),
       url('../images/main.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    height: 25em;
+  }
+}
+
+.container {
+  max-width: $desktop-size;
+  margin: 0 auto;
+  padding: 0 1rem;
+  &--cta {
+  }
+  &--hidden {
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section--cta {
+    background-image: linear-gradient($background-dark-transparent, $background-dark-transparent),
+      url('../images/main@2x.jpg');
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .section {
+    padding: 5.875rem 0;
+  }
+  .section--cta {
+    height: 37.5rem;
+  }
+  .container--cta {
+    padding: 0 15.75rem;
+  }
+  .section__main-header {
+    font-size: font-size('main-header');
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .container--cta {
+    padding: 0 12.5rem;
+  }
+}
+
+@media (min-width: $tablet-size) and (max-width: $desktop-size) {
+  .section--cta {
+    background-position: center;
+    background-image: linear-gradient($background-dark-transparent, $background-dark-transparent),
+      url('../images/main768.jpg');
+  }
+}
+
+@media (max-width: $desktop-size) {
+  .container--hidden {
+    display: none;
   }
 }

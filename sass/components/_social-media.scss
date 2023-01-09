@@ -2,10 +2,19 @@
 @use '../components/extends' as *;
 
 //klasa dla stylizowania icon social-media
+
+.flex--social-media {
+  justify-content: center;
+  gap: 10px;
+  & * {
+    width: 44px;
+  }
+}
+
 .social-media {
   display: block;
-  padding: 0.75rem;
   border-radius: 50%;
+  width: 20px;
   @extend .default-transition;
 
   &--footer {

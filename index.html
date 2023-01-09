@@ -138,37 +138,39 @@
               </article>
             </li>
           </ul>
-          <!-- sekcja czym się zajmujemy (nagłówek i 3 zdjęcia) -->
-          <h2 class="section__header">Czym się zajmujemy</h2>
-          <ul class="flex">
-            <li>
-              <img
-                src="images/what_we_do/what_we_do_1.jpg"
-                alt="Osoba pisząca kod przed komputerem"
-                width="370"
-                height="294"
-              />
-              <div class="overlay-text">aplikacje komputerowe</div>
-            </li>
-            <li>
-              <img
-                src="images/what_we_do/what_we_do_2.jpg"
-                alt="Osoba tworząca na laptopie aplikacje mobilną"
-                width="370"
-                height="294"
-              />
-              <div class="overlay-text">aplikacje mobilne</div>
-            </li>
-            <li>
-              <img
-                src="images/what_we_do/what_we_do_3.jpg"
-                alt="Pracownik wybierający na tablecie kolor z palety kolorów"
-                width="370"
-                height="294"
-              />
-              <div class="overlay-text">rozwiązania graficzne</div>
-            </li>
-          </ul>
+          <div class="container container--hidden">
+            <!-- sekcja czym się zajmujemy (nagłówek i 3 zdjęcia) -->
+            <h2 class="section__header">Czym się zajmujemy</h2>
+            <ul class="flex">
+              <li>
+                <img
+                  src="images/what_we_do/what_we_do_1.jpg"
+                  alt="Osoba pisząca kod przed komputerem"
+                  width="370"
+                  height="294"
+                />
+                <div class="overlay-text">aplikacje komputerowe</div>
+              </li>
+              <li>
+                <img
+                  src="images/what_we_do/what_we_do_2.jpg"
+                  alt="Osoba tworząca na laptopie aplikacje mobilną"
+                  width="370"
+                  height="294"
+                />
+                <div class="overlay-text">aplikacje mobilne</div>
+              </li>
+              <li>
+                <img
+                  src="images/what_we_do/what_we_do_3.jpg"
+                  alt="Pracownik wybierający na tablecie kolor z palety kolorów"
+                  width="370"
+                  height="294"
+                />
+                <div class="overlay-text">rozwiązania graficzne</div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -176,19 +178,18 @@
       <section class="section section--team">
         <div class="container">
           <h2 class="section__header">Nasz zespół</h2>
-          <ul class="flex">
+          <ul class="flex flex--team">
             <li>
               <figure class="team-member">
                 <img
                   src="images/team/team_1.jpg"
                   alt="Uśmiechnięty męzczyzna z brodą w okularach"
-                  width="270"
-                  height="260"
+                  srcset="images/team/team_1.jpg 270w, images/team/team_1@2x.jpg 450w"
                 />
                 <figcaption class="team-member__description">
                   <span class="team-member__name">John Doe</span>
                   <p class="team-member__position">Product Designer</p>
-                  <ul class="flex">
+                  <ul class="flex flex--social-media">
                     <li>
                       <a href="#" class="social-media social-media--team">
                         <svg width="20" height="20" class="icon icon--social">
@@ -226,14 +227,12 @@
                 <img
                   src="images/team/team_2.jpg"
                   alt="Uśmiechnięta kobieta w okularach z długimi blond włosami"
-                  width="270"
-                  height="260"
-                  class="team-photo"
+                  srcset="images/team/team_2@2x.jpg 2x"
                 />
                 <figcaption class="team-member__description">
                   <span class="team-member__name">John Doe</span>
                   <p class="team-member__position">Frontend Developer</p>
-                  <ul class="flex">
+                  <ul class="flex flex--social-media">
                     <li>
                       <a href="#" class="social-media social-media--team">
                         <svg width="20" height="20" class="icon icon--social">
@@ -271,14 +270,12 @@
                 <img
                   src="images/team/team_3.jpg"
                   alt="Uśmiechnięty mężczyzna w błękitnej koszuli"
-                  width="270"
-                  height="260"
-                  class="team-photo"
+                  srcset="images/team/team_3@2x.jpg 2x"
                 />
                 <figcaption class="team-member__description">
                   <span class="team-member__name">John Doe</span>
                   <p class="team-member__position">Marketing</p>
-                  <ul class="flex">
+                  <ul class="flex flex--social-media">
                     <li>
                       <a href="#" class="social-media social-media--team">
                         <svg width="20" height="20" class="icon icon--social">
@@ -316,14 +313,12 @@
                 <img
                   src="images/team/team_4.jpg"
                   alt="Meżczyzna w okularach w czarnej koszulce"
-                  width="270"
-                  height="260"
-                  class="team-photo"
+                  srcset="images/team/team_4@2x.jpg 2x"
                 />
                 <figcaption class="team-member__description">
                   <span class="team-member__name">John Doe</span>
                   <p class="team-member__position">UI Designer</p>
-                  <ul class="flex">
+                  <ul class="flex flex--social-media">
                     <li>
                       <a href="#" class="social-media social-media--team">
                         <svg width="20" height="20" class="icon icon--social">
