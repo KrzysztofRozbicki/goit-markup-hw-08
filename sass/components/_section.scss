@@ -14,7 +14,7 @@
 
   &__header {
     color: font-color('secondary');
-    font-size: font-size('section-header');
+    font-size: font-size('section-header-mobile');
     font-weight: 700;
     margin-bottom: 3.125rem;
   }
@@ -26,6 +26,7 @@
 
   &--team {
     background-color: $button-color;
+    padding: 3.75rem 0;
   }
 
   &--cta {
@@ -88,5 +89,11 @@
 @media (max-width: $desktop-size) {
   .container--hidden {
     display: none;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .section__header {
+    font-size: font-size('section-header-desktop');
   }
 }
