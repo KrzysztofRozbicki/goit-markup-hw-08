@@ -66,7 +66,7 @@
 /* Klasa project dla siatki w których są przykłady portfolio */
 .box-grid {
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 

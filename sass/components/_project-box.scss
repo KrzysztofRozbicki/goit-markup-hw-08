@@ -4,6 +4,7 @@
 .project-box {
   position: relative;
   width: 370px;
+  margin-bottom: 30px;
   @extend .default-transition;
 
   &:hover,
