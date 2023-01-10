@@ -11,6 +11,7 @@
   padding: 2rem;
   background-color: white;
   transform: translateX(100%);
+  @extend .default-transition;
   &__button {
     align-items: flex-end;
     fill: currentColor;
@@ -91,6 +92,7 @@
 }
 
 .menu.is-open {
+  @extend .default-transition;
   transform: translateX(0);
   opacity: 1;
 }

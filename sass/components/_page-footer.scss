@@ -14,6 +14,7 @@
   &__social-box {
     margin-top: 1.25rem;
     display: flex;
+    justify-content: center;
     gap: 0.625rem;
   }
   &__address {
@@ -29,6 +30,12 @@
   }
 }
 
+@media (min-width: $tablet-size) {
+  .bottom__info {
+    flex-basis: 40%;
+  }
+}
+
 @media (min-width: $desktop-size) {
   .bottom__info {
     text-align: left;
@@ -36,5 +43,8 @@
   }
   .bottom__header {
     align-self: flex-start;
+  }
+  .bottom__social-box {
+    justify-content: flex-start;
   }
 }

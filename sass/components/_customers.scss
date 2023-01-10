@@ -14,3 +14,10 @@
     outline-color: $active;
   }
 }
+
+@media (max-width: 402px) {
+  .client-logo {
+    padding: 1rem 1rem;
+    max-width: 10rem;
+  }
+}

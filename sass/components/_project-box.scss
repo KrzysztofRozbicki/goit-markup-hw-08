@@ -1,10 +1,17 @@
 @use '../utils/variables' as *;
 @use '../components/extends' as *;
 
+/* Klasa project dla siatki w których są przykłady portfolio */
+.box-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+
 .project-box {
   position: relative;
-  width: 370px;
-  margin-bottom: 30px;
+  max-width: 450px;
   @extend .default-transition;
 
   &:hover,
@@ -13,10 +20,14 @@
     cursor: pointer;
   }
 
+  &__picture {
+    max-height: 294px;
+  }
+
   &__text-box {
     position: relative;
     overflow: hidden;
-    height: 294px;
+    height: inherit;
   }
 
   &__text {
@@ -59,5 +70,23 @@
     font-size: font-size('medium');
     line-height: 1.875;
     text-align: left;
+  }
+}
+
+@media (min-width: $tablet-size) {
+  .project-box {
+    max-width: 354px;
+  }
+  .project-box__caption--techno {
+    padding-bottom: 3.5rem;
+  }
+  .box-grid {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .project-box {
+    max-width: 370px;
   }
 }
