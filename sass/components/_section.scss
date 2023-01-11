@@ -13,7 +13,7 @@
   }
 
   &__header {
-    color: font-color('secondary');
+    color: var(--secondary-color);
     font-size: font-size('section-header-mobile');
     font-weight: 700;
     margin-bottom: 3.125rem;
@@ -21,7 +21,7 @@
 
   &--article {
     padding: 3.75rem 0;
-    background-color: font-color('contrast');
+    background-color: var(--bg-color);
   }
 
   &--team {
@@ -38,6 +38,10 @@
     align-items: center;
     height: 25em;
   }
+  &--tutorial {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--secondary-color);
+  }
 }
 
 .container {
@@ -49,6 +53,8 @@
   &--hidden {
   }
   &--tutorial {
+    background-color: var(--bg-color);
+    position: relative;
     padding-block: 1.5rem;
   }
 }

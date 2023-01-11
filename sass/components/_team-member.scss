@@ -4,7 +4,7 @@
 /* klasy dla boxów z członkami zespołu */
 
 .team-member {
-  background-color: font-color('contrast');
+  background-color: var(--bg-color);
   font-size: font-size('medium');
   @extend .box-shadow;
   border-radius: 0px 0px 0.25rem 0.25rem;
@@ -16,7 +16,7 @@
   }
 
   &__name {
-    color: font-color('secondary');
+    color: var(--secondary-color);
   }
 
   &__position {

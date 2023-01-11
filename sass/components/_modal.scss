@@ -35,7 +35,7 @@
   visibility: visible;
   transform: translate(-50%, -50%) scale(1);
   width: min(93.75vw, 28.125rem);
-  background-color: font-color('contrast');
+  background-color: var(--bg-color);
   border-radius: 0.25rem;
   @extend .box-shadow;
 
@@ -47,7 +47,7 @@
     height: 1.875rem;
     padding: 9px;
     border: 1px solid $close-circle;
-    background-color: font-color('contrast');
+    background-color: var(--bg-color);
     border-radius: 50%;
     cursor: pointer;
   }

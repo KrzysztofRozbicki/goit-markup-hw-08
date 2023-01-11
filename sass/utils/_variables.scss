@@ -1,5 +1,13 @@
 /* Deklaracja zmiennych globalnych dla kolorów */
 @forward '../utils/maps';
+:root {
+  --primary-color: #302ae6;
+  --secondary-color: #212121;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+  --logo: #000000;
+}
 
 $active: #2196f3;
 $active-transparent: rgba(33, 150, 243, 0.9);
@@ -23,3 +31,14 @@ $tablet-size: 768px;
 $mobile-size: 480px;
 $min-size: 320px;
 $important: #c73e1d;
+
+[data-theme='dark'] {
+  --primary-color: #9a97f3;
+  --secondary-color: #fff;
+  --font-color: #e1e1ff;
+  --bg-color: #2f303a;
+  --heading-color: #818cab;
+  --logo: #fff;
+  $important: #fff;
+  $logo: #fff;
+}

@@ -4,11 +4,11 @@
 
 .header {
   padding: 1rem 0px;
-  background-color: font-color('contrast');
+  background-color: var(--bg-color);
   border-bottom: 1px solid $stroke-color;
 
   &__hyperlink {
-    color: font-color('secondary');
+    color: var(--secondary-color);
     @extend .default-transition;
     &:hover,
     &:focus {

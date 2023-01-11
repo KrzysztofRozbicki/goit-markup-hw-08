@@ -3,7 +3,7 @@
 
 .tutorial {
   text-align: center;
-  border-top: 1px solid $border;
+  border-top: 1px solid var(--secondary-color);
   &__photo {
     margin: 2rem auto;
   }
@@ -13,7 +13,7 @@
     line-height: 1.5;
     max-width: 50rem;
     margin: 2rem auto;
-    color: font-color('secondary');
+    color: var(--secondary-color);
     text-align: justify;
   }
   &__text--important {

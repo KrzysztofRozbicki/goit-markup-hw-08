@@ -12,7 +12,7 @@
     font-size: font-size('large');
     font-weight: 700;
 
-    color: font-color('secondary');
+    color: var(--secondary-color);
     margin-bottom: 0.75rem;
   }
 
@@ -50,7 +50,7 @@
   &__label-box {
     display: flex;
     flex-direction: column;
-    fill: font-color('secondary');
+    fill: var(--secondary-color);
     @extend .default-transition;
 
     &:focus-within {
@@ -102,7 +102,7 @@
     left: 0;
     width: 1rem;
     height: 1rem;
-    border: 1px solid font-color('secondary');
+    border: 1px solid var(--secondary-color);
     border-radius: 2px;
     margin-right: 0.5rem;
     @extend .default-transition;
