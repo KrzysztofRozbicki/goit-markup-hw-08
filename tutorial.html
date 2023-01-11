@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <!-- Nagłówek z tagami meta oraz tytułem i opisem-->
+  <head>
+    <!-- Normalizator -->
+    <link rel="stylesheet" href="css/modern-normalize.css" />
+    <!-- Czcionki -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial</title>
+    <meta name="description" content="WebStudio - Tutorial" />
+  </head>
+  <body class="webstudio">
+    <header class="header">
+      <div class="container flex">
+        <!-- Logo -->
+        <a href="index.html" class="logo">Web<span class="logo__header">Studio</span> </a>
+        <button class="menu__toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="24" height="16" class="menu__button">
+            <use href="images/icons.svg#menu-button"></use>
+          </svg>
+        </button>
+        <!-- Menu górne-->
+        <div class="nav">
+          <nav>
+            <ul class="header__links">
+              <li>
+                <a href="index.html" class="header__hyperlink">Agencja</a>
+              </li>
+              <li>
+                <a href="portfolio.html" class="header__hyperlink"> Portfolio </a>
+              </li>
+              <li>
+                <a href="#" class="header__hyperlink header__hyperlink--is-active">Tutorial</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- dane teleadresowe-->
+
+          <ul class="header__contacts">
+            <li>
+              <a href="mailto:info@devstudio.com" class="contact contact--header">
+                <svg width="16" height="12" class="icon icon--top">
+                  <use href="images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+48111111111" class="contact contact--header">
+                <svg width="10" height="16" class="icon icon--top">
+                  <use href="images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +48 111 111 111
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container container--tutorial">
+          <h1 class="section__header">Jak zrobić wysuwane menu za pomocą skryptu .js</h1>
+          <ul>
+            <li>
+              <figure class="tutorial">
+                <img
+                  class="tutorial__photo"
+                  src="./images/tutorial/Step-1.png"
+                  alt="krok pierwszy"
+                />
+                <figcaption class="tutorial__text">
+                  Tworzymy plik mobile-menu.js w folderze /js i wklejamy tam skrypt z tego pliku :
+                  <a
+                    class="logo header__hyperlink"
+                    href="https://github.com/goitacademy/mobile-menu-workshop/blob/main/js/mobile-menu.js"
+                    target="_blank"
+                  >
+                    mobile-menu.js
+                  </a>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="tutorial">
+                <img src="./images/tutorial/Step-2.png" alt="Krok nr 2" class="tutorial__photo" />
+                <figcaption class="tutorial__text">
+                  Wrzucamy skrypt w HTML`u tak samo jak zrobiliśmy to dla skryptu z oknem modelnym z
+                  zadania 05 <br />
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="tutorial">
+                <img src="./images/tutorial/Step-3.png" alt="Krok nr 3" class="tutorial__photo" />
+                <figcaption class="tutorial__text">
+                  Robimy / kopiujemy ikonkę hamburgera z figmy - wrzucamy svg do naszego pliku ze
+                  sprite`ami icons.svg , a następnie wrzucamy go jako buttona do naszego headera -
+                  moim zdaniem wygodniej to zrobić poza nawigacją.
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="tutorial">
+                <img
+                  src="./images/tutorial/Step-3-1.gif"
+                  alt="Krok nr 3.1"
+                  class="tutorial__photo"
+                />
+                <figcaption class="tutorial__text">
+                  Możemy ustawić pojawianie i znikanie buttona oraz nawigacji za pomocą <br />
+                  <span class="tutorial__text--important">display: none;</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="tutorial">
+                <img src="./images/tutorial/Step-4.png" alt="Krok nr 4" class="tutorial__photo" />
+                <figcaption class="tutorial__text">
+                  W buttonie dodajemy klasę ze stylami, oraz
+                  <span class="tutorial__text--important">KONIECZNIE klasę 'js-modal-open' </span>to
+                  dzięki niej skrypt będzie wiedział, że przycisk ma służyć do otworzenia menu.
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="tutorial">
+                <img src="./images/tutorial/Step-5.png" alt="Krok nr 5" class="tutorial__photo" />
+                <figcaption class="tutorial__text">
+                  Na końcu strony tuż przed body tworzymy nasze menu (podobnie jak okno modalne).
+                  Polecam zrobić po prostu diva i dać mu szerokość i wysokość np. 100vw / 100vh żeby
+                  nam się wyświetlał na całym ekranie. Dodajemy
+                  <span class="tutorial__text--important">
+                    KONIECZNIE klasę 'js-menu-container'
+                  </span>
+                  to dzięki niemu skrypt wie co ma otworzyć.
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="tutorial">
+                <img
+                  src="./images/tutorial/Step-5-1.png"
+                  alt="Krok nr 5-1"
+                  class="tutorial__photo"
+                />
+                <figcaption class="tutorial__text">
+                  Gdy przejedziemy na koniec strony pokaże się biała pusta przestrzeń - to właśnie
+                  nasze przyszłe menu. Mam nadzieję że pamiętacie z hw-05 je wypozycjonować i
+                  schować.
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="tutorial">
+                <img
+                  src="./images/tutorial/Step-5-2.png"
+                  alt="Krok nr 5-2"
+                  class="tutorial__photo"
+                />
+                <figcaption class="tutorial__text">
+                  Pamiętacie słynne <span class="tutorial__text--important">.is-hidden </span> z
+                  hw-05? <br />
+                  Zaglądamy do naszego pliku js i poza skryptem który jest dla nas w tym momencie
+                  kompletną chińszczyzną zwracamy uwagę na
+                  <span class="tutorial__text--important">('is-open')</span> <br />
+                  Jest to element który mówi naszemu HTMLowi że okno jest otwarta. <br />
+                  Dlatego tak jak w hw-05dodajemy do naszej klasy
+                  <span class="tutorial__text--important"> .is-open </span> (np
+                  .mobile-menu.is-open) A następnie sytlizujemy tak żeby nam się pojawiło (znów za
+                  pomocą transform albo opacity). Przeglądarka odczyta to w ten sposób jeśli div
+                  mobile-menu jest otwarty (is-open) wtedy ustawiam pozycje na 0.
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="tutorial">
+                <img src="./images/tutorial/Step-5-1.gif" alt="Krok nr 5" class="tutorial__photo" />
+                <figcaption class="tutorial__text">
+                  W tym momencie powiniśmy mieć coś takiego - pojawi nam się biały ekran, teraz
+                  potrzebujemy jeszcze przycisku żeby zamknąć nasze menu.
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="tutorial">
+                <img src="./images/tutorial/Step-6.png" alt="Krok nr 6" class="tutorial__photo" />
+                <figcaption class="tutorial__text">
+                  W naszym rozwijanym menu tworzymy "X" czyli przycisk zamknięcia - i znowu poza
+                  standardową klasą ze stylem
+                  <span class="tutorial__text--important">
+                    KONIECZNIE dodajemy mu klasę js-close-menu
+                  </span>
+                  to dzięki niej skrypt będzie wiedział że służy do zamknięcia.
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="tutorial">
+                <img src="./images/tutorial/Step-7.png" alt="Krok nr 7" class="tutorial__photo" />
+                <figcaption class="tutorial__text">
+                  <span class="tutorial__text--important">
+                    'js-open-menu' 'js-close-menu' 'js-menu-container' NIE MUSIMY
+                  </span>
+                  dodawać do naszego SCSS/CSS - są one niejako "wirtualne" i służa tylko jako
+                  drogowskazy dla skryptu js
+                </figcaption>
+              </figure>
+            </li>
+            <li>
+              <figure class="tutorial">
+                <img src="./images/tutorial/Step-8.gif" alt="Krok nr 8" class="tutorial__photo" />
+                <figcaption class="tutorial__text">
+                  Teraz przy klikaniu na przyciski okienko powinno się pojawiać i znikać. Możemy
+                  dodać animacje / tranzycje żeby wyglądało ładniej. Teraz wystarczy je wystylizować
+                  i dodać odpowiednią treść i gotowe! <br> <br>
+                                    <span class="tutorial__text--important">
+                    !!! Jeśli będziecie robić portolio.html to pamiętajcie żeby tam również wrzucić diva i podlinkować skrypt !!!
+                  </span>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- footer skopiowany z index.html -->
+    <footer class="bottom">
+      <div class="container flex flex--footer">
+        <div class="bottom__info">
+          <a href="index.html" class="logo">Web<span class="logo__footer">Studio</span></a>
+          <address>
+            <ul class="bottom__address">
+              <li class="contact">m. Warszawa, Aleje Jerozolimskie 21</li>
+              <li class="bottom__address__margin">
+                <a href="mailto:info@devstudio.com" class="contact contact--footer">
+                  info@example.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+48111111111" class="contact contact--footer">+48 111 111 111</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="bottom__info">
+          <p class="bottom__header">dołącz do nas</p>
+          <ul class="bottom__social-box">
+            <li>
+              <a href="#" class="social-media social-media--footer">
+                <svg width="20" height="20" class="icon icon--social">
+                  <use href="images/icons.svg#icon-instagram-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-media social-media--footer">
+                <svg width="20" height="20" class="icon icon--social">
+                  <use href="images/icons.svg#icon-twitter-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-media social-media--footer">
+                <svg width="20" height="20" class="icon icon--social">
+                  <use href="images/icons.svg#icon-facebook-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-media social-media--footer">
+                <svg width="20" height="20" class="icon icon--social">
+                  <use href="images/icons.svg#icon-linkedin-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex--newsletter">
+          <p class="bottom__header">zapisz się do newslettera</p>
+          <form class="newsletter">
+            <label for="newsletter"></label>
+            <input
+              name="newsletter"
+              type="text"
+              id="newsletter"
+              placeholder="E-mail"
+              class="newsletter__email-box"
+            />
+            <button type="submit" class="button button--cta button--newsletter">
+              Zapisz się
+              <svg width="24" height="24" class="icon icon--newsletter">
+                <use href="images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <div class="menu js-menu-container" id="mobile-menu">
+      <button class="menu__toggle js-open-menu js-close-menu">
+        <svg class="icon" width="18" height="18">
+          <use href="images/icons.svg#close-x"></use>
+        </svg>
+      </button>
+      <div class="menu__container">
+        <ul class="menu__nav">
+          <li><a href="index.html" class="menu__link">Agencja</a></li>
+          <li><a href="portfolio.html" class="menu__link">Portfolio</a></li>
+          <li><a href="tutorial.html" class="menu__link">Tutorial</a></li>
+        </ul>
+        <div class="menu__nav">
+          <a href="tel:+48111111111" class="menu__link menu__link--active"> +48 111 111 111 </a>
+          <a href="mailto:info@devstudio.com" class="menu__email"> info@devstudio.com </a>
+          <ul class="menu__social">
+            <li><a class="menu__social__link" href="#">Instagram</a></li>
+            <li><a class="menu__social__link" href="#">Twitter</a></li>
+            <li><a class="menu__social__link" href="#">Facebook</a></li>
+            <li><a class="menu__social__link" href="#">Linkedln</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script defer src="./js/mobile-menu.js"></script>
+  </body>
+</html>
