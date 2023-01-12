@@ -1,7 +1,5 @@
 @use '../utils/variables' as *;
 @use '../components/extends' as *;
- 
-
 
 .post-meta {
   font-size: 1rem;
@@ -11,17 +9,38 @@
   color: var(--secondary-color);
 }
 
-
 /*slider switch css */
 .theme-switch-wrapper {
-    position: absolute;
-    top: -3rem;
-right: 1rem;
-
+  display: block;
+  position: fixed;
+  top: 0.75rem;
+  right: 20vw;
   display: flex;
   align-items: center;
-  
 }
+
+@media (min-width: $mobile-size) {
+  .theme-switch-wrapper {
+    position: absolute;
+    top: -51px;
+    right: 95px;
+  }
+}
+@media (min-width: $tablet-size) {
+  .theme-switch-wrapper {
+    position: absolute;
+    top: -3.75rem;
+    right: 12.5rem;
+  }
+}
+@media (min-width: $desktop-size) {
+  .theme-switch-wrapper {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+  }
+}
+
 .theme-switch {
   display: inline-block;
   height: 34px;
@@ -30,7 +49,7 @@ right: 1rem;
 }
 
 .theme-switch input {
-  display:none;
+  display: none;
 }
 
 .slider {
@@ -41,17 +60,17 @@ right: 1rem;
   position: absolute;
   right: 0;
   top: 0;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider:before {
   background-color: #fff;
   bottom: 4px;
-  content: "";
+  content: '';
   height: 26px;
   left: 4px;
   position: absolute;
-  transition: .4s;
+  transition: 0.4s;
   width: 26px;
 }
 
@@ -70,5 +89,3 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
-

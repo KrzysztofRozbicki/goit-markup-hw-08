@@ -39,6 +39,7 @@
     height: 25em;
   }
   &--tutorial {
+    position: relative;
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--secondary-color);
   }
@@ -81,6 +82,9 @@
   }
   .container--cta {
     padding: 0 15.75rem;
+  }
+  .section--tutorial {
+    padding: 1rem 0;
   }
 
   .container {
